@@ -1,11 +1,11 @@
 # compile-jdk17u-steps
-记录下在m1pro芯片的macOS上编译jdk17u的过程
+记录下在 `m1pro` 芯片的 `macOS` 上编译 `jdk17u` 的过程
 
 ## 为什么编译jdk17u这个版本
 
-`JDK 8` 最早发布时，主要支持的是 `x86` 和 `x64` 架构的系统。`Apple M1 Pro` 芯片使用的是 `AArch64` 架构，而 `JDK 8` 并没有对 `macOS/AArch64` 提供原生支持，需要使用`Rosetta 2` 转译工具在 `M1 Pro `芯片上运行基于 `x86_64` 架构的 `JDK 8`。
+`jdk8` 最早发布时，主要支持的是 `x86` 和 `x64` 架构的系统。`Apple M1 Pro` 芯片使用的是 `AArch64` 架构，而 `jdk8` 并没有对 `macOS/AArch64` 提供原生支持，需要使用 `Rosetta 2` 转译工具在 `M1 Pro `芯片上运行基于 `x86_64` 架构的 `jdk8`。
 
-`JDK 17` 已经为 `macOS/AArch64` 提供了原生支持，性能和兼容性都更好。
+`jdk17` 已经为 `macOS/AArch64` 提供了原生支持，性能和兼容性都更好。
 
 - [JEP 306: Restore Always-Strict Floating-Point Semantics](https://openjdk.java.net/jeps/306)
 - [JEP 356: Enhanced Pseudo-Random Number Generators](https://openjdk.java.net/jeps/356)
@@ -22,7 +22,7 @@
 - [JEP 414: Vector API (Second Incubator)](https://openjdk.java.net/jeps/414)
 - [JEP 415: Context-Specific Deserialization Filters](https://openjdk.java.net/jeps/415)
 
-其中 `JEP 391`的增强是专门为了支持 `macOS/AArch64`（即 `M` 系列芯片）的，因此从 `JDK 17` 开始，编译 `JDK` 会充分利用 `M1` 芯片的架构优势，而不需要依赖 `Rosetta 2` 来进行` x86` 到 `ARM` 的转译。
+其中 `JEP 391`的增强是专门为了支持 `macOS/AArch64`（即 `M` 系列芯片）的，因此从 `jdk17` 开始，编译 `jdk` 会充分利用 `m` 系列芯片的架构优势，而不需要依赖 `Rosetta 2` 来进行` x86` 到 `ARM` 的转译。
 
 详细的构建流程查看`openjdk`官方： https://github.com/openjdk/jdk17u/blob/master/doc/building.md
 
@@ -96,9 +96,9 @@ sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.j
 
 其中
 
-`--with-boot-jdk=` 后面指定你自己刚才下载的jdk16的路径
+`--with-boot-jdk=` 后面指定你自己刚才下载的`jdk16`的路径
 
-`--with-xcode-path=` 后面指定你自己刚才下载的Xcode路径
+`--with-xcode-path=` 后面指定你自己刚才下载的`Xcode`路径
 
 成功会出现类似于以下内容：
 

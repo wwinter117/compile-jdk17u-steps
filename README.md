@@ -91,14 +91,14 @@ git clone https://github.com/openjdk/jdk17.git
 进入源码目录，输入：
 
 ```
-sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-xcode-path=/Users/zhangdongdong/Downloads/Xcode.app
+sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-xcode-path=～/Downloads/Xcode.app
 ```
 
 其中
 
-`--with-boot-jdk=` 后面指定刚才下载的jdk16的路径
+`--with-boot-jdk=` 后面指定你自己刚才下载的jdk16的路径
 
-`--with-xcode-path=` 后面指定刚才下载的Xcode路径
+`--with-xcode-path=` 后面指定你自己刚才下载的Xcode路径
 
 成功会出现类似于以下内容：
 

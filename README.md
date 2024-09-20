@@ -78,13 +78,13 @@ brew install autoconf
 **ssh:**
 
 ```
-git clone git@github.com:openjdk/jdk17.git
+git clone git@github.com:openjdk/jdk17u.git
 ```
 
 **https:**
 
 ```
-git clone https://github.com/openjdk/jdk17.git
+git clone https://github.com/openjdk/jdk17u.git
 ```
 ## 开始编译
 

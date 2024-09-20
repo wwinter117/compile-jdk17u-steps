@@ -1,7 +1,7 @@
 # compile-jdk17u-steps
 记录下在 `m1pro` 芯片的 `macOS` 上编译 `jdk17u` 的过程
 
-## 为什么编译jdk17u这个版本
+## 为什么选择编译jdk17u
 
 `jdk8` 最早发布时，主要支持的是 `x86` 和 `x64` 架构的系统。`Apple M1 Pro` 芯片使用的是 `AArch64` 架构，而 `jdk8` 并没有对 `macOS/AArch64` 提供原生支持，需要使用 `Rosetta 2` 转译工具在 `M1 Pro `芯片上运行基于 `x86_64` 架构的 `jdk8`。
 

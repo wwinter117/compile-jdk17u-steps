@@ -97,6 +97,7 @@ sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.j
 其中
 
 `--with-boot-jdk=` 后面指定刚才下载的jdk16的路径
+
 `--with-xcode-path=` 后面指定刚才下载的Xcode路径
 
 成功会出现类似于以下内容：

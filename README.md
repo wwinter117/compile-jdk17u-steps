@@ -3,32 +3,6 @@
 
 ## 为什么编译jdk17u这个版本
 
-JDK 8 最早发布时，主要支持的是 x86 和 x64 架构的系统。Apple M1 Pro 芯片使用的是 AArch64 架构，而 JDK 8 并没有对 macOS/AArch64 提供原生支持，需要使用Rosetta 2 转译工具在 M1 Pro 芯片上运行基于 x86_64 架构的 JDK 8。
-
-JDK 17 已经为 macOS/AArch64 提供了原生支持，性能和兼容性都更好。
-
-- [JEP 306: Restore Always-Strict Floating-Point Semantics](https://openjdk.java.net/jeps/306)
-- [JEP 356: Enhanced Pseudo-Random Number Generators](https://openjdk.java.net/jeps/356)
-- [JEP 382: New macOS Rendering Pipeline](https://openjdk.java.net/jeps/382)
-- [JEP 391: macOS/AArch64 Port](https://openjdk.java.net/jeps/391)
-- [JEP 398: Deprecate the Applet API for Removal](https://openjdk.java.net/jeps/398)
-- [JEP 403: Strongly Encapsulate JDK Internals](https://openjdk.java.net/jeps/403)
-- [JEP 406: Pattern Matching for switch (Preview)](https://openjdk.java.net/jeps/406)
-- [JEP 407: Remove RMI Activation](https://openjdk.java.net/jeps/407)
-- [JEP 409: Sealed Classes](https://openjdk.java.net/jeps/409)
-- [JEP 410: Remove the Experimental AOT and JIT Compiler](https://openjdk.java.net/jeps/410)
-- [JEP 411: Deprecate the Security Manager for Removal](https://openjdk.java.net/jeps/411)
-- [JEP 412: Foreign Function & Memory API (Incubator)](https://openjdk.java.net/jeps/412)
-- [JEP 414: Vector API (Second Incubator)](https://openjdk.java.net/jeps/414)
-- [JEP 415: Context-Specific Deserialization Filters](https://openjdk.java.net/jeps/415)
-
-其中 **JEP 391** 的增强是专门为了支持 macOS/AArch64（即 M1 系列芯片）的，因此从 JDK 17 开始，编译 JDK 会充分利用 M1 芯片的架构优势，而不需要依赖 Rosetta 2 来进行 x86 到 ARM 的转译。
-
-详细的构建流程查看： https://github.com/openjdk/jdk17u/blob/master/doc/building.md
-
-接下来是在m1pro芯片的macos上的编译过程
-## 为什么编译jdk17u这个版本
-
 `JDK 8` 最早发布时，主要支持的是 `x86` 和 `x64` 架构的系统。`Apple M1 Pro` 芯片使用的是 `AArch64` 架构，而 `JDK 8` 并没有对 `macOS/AArch64` 提供原生支持，需要使用`Rosetta 2` 转译工具在 `M1 Pro `芯片上运行基于 `x86_64` 架构的 `JDK 8`。
 
 `JDK 17` 已经为 `macOS/AArch64` 提供了原生支持，性能和兼容性都更好。

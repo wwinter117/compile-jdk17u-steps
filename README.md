@@ -91,7 +91,7 @@ git clone https://github.com/openjdk/jdk17u.git
 进入源码目录，输入：
 
 ```
-sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-xcode-path=～/Downloads/Xcode.app
+sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-xcode-path=~/Downloads/Xcode.app
 ```
 
 其中

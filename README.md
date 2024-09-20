@@ -99,6 +99,53 @@ sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.j
 `--with-boot-jdk=` 后面指定刚才下载的jdk16的路径
 `--with-xcode-path=` 后面指定刚才下载的Xcode路径
 
+成功会出现类似于以下内容：
+
+```
+====================================================
+A new configuration has been successfully created in
+/Users/zhangdongdong/dev/github/x/jdk17u/build/macosx-aarch64-server-release
+using configure arguments '--with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-boot-jdk-jvmargs=-Xmx4096M --with-xcode-path=/Users/zhangdongdong/Downloads/Xcode.app'.
+Configuration summary:
+* Name:           macosx-aarch64-server-release
+* Debug level:    release
+* HS debug level: product
+* JVM variants:   server
+* JVM features:   server: 'cds compiler1 compiler2 dtrace epsilongc g1gc jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc' 
+* OpenJDK target: OS: macosx, CPU architecture: aarch64, address length: 64
+* Version string: 17.0.13-internal+0-adhoc.zhangdongdong.jdk17u (17.0.13-internal)
+
+Tools summary:
+* Boot JDK:       openjdk version "16.0.1" 2021-04-20 OpenJDK Runtime Environment AdoptOpenJDK-16.0.1+9 (build 16.0.1+9) OpenJDK 64-Bit Server VM AdoptOpenJDK-16.0.1+9 (build 16.0.1+9, mixed mode, sharing) (at /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home)
+* Toolchain:      clang (clang/LLVM from Xcode 13.1)
+* C Compiler:     Version 13.0.0 (at /Users/zhangdongdong/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang)
+* C++ Compiler:   Version 13.0.0 (at /Users/zhangdongdong/Downloads/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++)
+Build performance summary:
+* Cores to use:   8
+* Memory limit:   16384 MB
+
+The following warnings were produced. Repeated here for convenience:
+```
+
+可以看见已经配置了`bootjdk`为`jdk16.0.1`，`Xcode`版本为`13.1`
+
+然后可以输入下面命令，开始编译：
+
+```
+make images
+```
+
+等待一段时间后，编译成功会输出以下内容：
+
+```
+...
+Creating jdk image
+Creating CDS archive for jdk image
+Creating CDS-NOCOOPS archive for jdk image
+Stopping sjavac server
+Finished building target 'images' in configuration 'macosx-aarch64-server-release'
+```
+
 ## idea中验证
 
 投稿视频中演示

@@ -105,7 +105,7 @@ sh configure --with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.j
 ```
 ====================================================
 A new configuration has been successfully created in
-/Users/zhangdongdong/dev/github/x/jdk17u/build/macosx-aarch64-server-release
+/Users/zhangdongdong/x/jdk17u/build/macosx-aarch64-server-release
 using configure arguments '--with-boot-jdk=/Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home/ --with-boot-jdk-jvmargs=-Xmx4096M --with-xcode-path=/Users/zhangdongdong/Downloads/Xcode.app'.
 Configuration summary:
 * Name:           macosx-aarch64-server-release

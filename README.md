@@ -73,7 +73,7 @@ brew install freetype
 ```
 brew install autoconf
 ```
-### 获取源码
+## 获取源码
 
 **ssh:**
 
@@ -149,4 +149,4 @@ Finished building target 'images' in configuration 'macosx-aarch64-server-releas
 
 ## idea中验证
 
-投稿视频中演示
+bilibili投稿视频中演示

@@ -26,7 +26,7 @@
 
 详细的构建流程查看`openjdk`官方： https://github.com/openjdk/jdk17u/blob/master/doc/building.md
 
-接下来是在 `m1pro` 芯片的 `macos` 上的编译过程
+选择编译 `jdk17u`，该仓库包含对 `jdk17` 的增量更新。接下来是在 `m1pro` 芯片的 `macos` 上的编译过程
 
 ## 编译环境准备
 
